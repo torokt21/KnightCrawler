@@ -15,6 +15,6 @@
         /// <summary>
         /// Gets or sets the location of the entity.
         /// </summary>
-        Point Location { get; set; }
+        Rect Location { get; set; }
     }
 }
