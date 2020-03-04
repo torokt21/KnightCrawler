@@ -10,6 +10,7 @@
     class Obstacle : IObstacle
     {
         private Rect rectangle;
+
         public Rect Rectangle { get => rectangle; set => rectangle = value; }
     }
 }
