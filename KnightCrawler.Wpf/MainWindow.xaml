@@ -7,7 +7,9 @@
         mc:Ignorable="d"
         Background="#121212"
         Foreground="White"
-        Title="MainWindow" Height="450" Width="800">
+        WindowState="Maximized"
+        Icon="pack://application:,,,/KnightCrawler.Wpf;component/Images/knightcrawler.ico"
+        Title="KnightCrawler" Width="940" Height="600" >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>

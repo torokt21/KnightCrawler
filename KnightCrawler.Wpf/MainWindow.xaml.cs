@@ -4,16 +4,14 @@
 
 namespace KnightCrawler.Wpf
 {
-    using KnightCrawler.Engine.ViewModels;
     using System.Windows;
+    using KnightCrawler.Engine.ViewModels;
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml.
     /// </summary>
     public partial class MainWindow : Window
     {
-        GameViewModel ViewModel { get; set; }
-
         /// <summary>
         /// Initializes a new instance of the <see cref="MainWindow"/> class.
         /// </summary>
@@ -27,5 +25,10 @@ namespace KnightCrawler.Wpf
             this.jatekter.Initialize();
             this.jatekter.InvalidateVisual();
         }
+
+        /// <summary>
+        /// Gets or sets the view model of the game window.
+        /// </summary>
+        private GameViewModel ViewModel { get; set; }
     }
 }
