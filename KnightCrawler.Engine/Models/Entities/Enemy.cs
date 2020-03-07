@@ -29,10 +29,10 @@ namespace KnightCrawler.Engine.Models.Entities
         }
 
         /// <inheritdoc/>
-        public IEnemyBehaviour AttackBehaviour { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public IEnemyBehaviour AttackBehaviour { get; set; }
 
         /// <inheritdoc/>
-        public IEnemyMovementBehaviour MovementBehaviour { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public IEnemyMovementBehaviour MovementBehaviour { get; set; }
 
         /// <summary>
         /// Handles every action of the enemy on every tick.

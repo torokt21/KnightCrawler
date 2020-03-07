@@ -26,7 +26,8 @@ namespace KnightCrawler.Engine.Models.World
         /// </summary>
         public Room(string fileName)
         {
-
+            // TODO - all layouts should be loaded when the application starts. Then each room instance would get a layout based on which directions are open
+            this.LoadLayout(fileName);
         }
 
         /// <summary>
@@ -50,6 +51,7 @@ namespace KnightCrawler.Engine.Models.World
         /// <param name="filename">The file to load the layout from.</param>
         public void LoadLayout(string filename)
         {
+            this.FloorTiles = new FloorTile[RoomHeigth, RoomWidth];
             if (string.IsNullOrWhiteSpace(filename))
             {
                 throw new ArgumentException("Invalid filename", nameof(filename));

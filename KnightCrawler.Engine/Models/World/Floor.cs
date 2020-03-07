@@ -31,7 +31,7 @@ namespace KnightCrawler.Engine.Models.World
         private void Generate()
         {
             // TODO
-            Room r = new Room();
+            Room r = new Room("rooms/0000.txt");
         }
     }
 }

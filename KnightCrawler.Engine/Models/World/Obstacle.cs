@@ -2,7 +2,7 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace KnightCrawler.Engine.Models.World.Obstacles
+namespace KnightCrawler.Engine.Models.World
 {
     using System;
     using System.Collections.Generic;
