@@ -7,9 +7,9 @@
     using System.Threading.Tasks;
 
     /// <summary>
-    /// Entity with healh.
+    /// Entity with health.
     /// </summary>
-    public class KillableEntity
+    public abstract class KillableEntity
     {
         /// <summary>
         /// Called when the entity's health reaches 0.

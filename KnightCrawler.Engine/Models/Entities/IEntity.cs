@@ -15,6 +15,11 @@
         /// <summary>
         /// Gets or sets the location of the entity.
         /// </summary>
-        Rect Location { get; set; }
+        Point Location { get; set; }
+
+        /// <summary>
+        /// Gets or sets the size of the entity.
+        /// </summary>
+        Size Size { get; set; }
     }
 }

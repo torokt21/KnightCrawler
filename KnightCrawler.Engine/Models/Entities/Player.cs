@@ -5,11 +5,12 @@
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using System.Windows;
 
     /// <summary>
     /// The player class.
     /// </summary>
-    public class Player : LivingEntity
+    public class Player : Entity
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Player"/> class.
@@ -19,6 +20,11 @@
         {
             this.Name = name;
         }
+
+        /// <summary>
+        /// Gets or sets the current score of the player.
+        /// </summary>
+        public int Score { get; set; }
 
         /// <summary>
         /// Gets the name of the current player.

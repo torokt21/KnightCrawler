@@ -7,8 +7,9 @@
     using System.Threading.Tasks;
     using System.Windows;
 
+
     public interface IObstacle
     {
-        Rect Rectangle { get; set; }
+        
     }
 }
