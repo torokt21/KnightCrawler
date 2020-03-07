@@ -1,4 +1,8 @@
-﻿namespace KnightCrawler.Wpf
+﻿// <copyright file="MainWindow.xaml.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace KnightCrawler.Wpf
 {
     using System.Windows;
 
@@ -14,8 +18,8 @@
         {
             this.InitializeComponent();
 
-            jatekter.Initialize();
-            jatekter.InvalidateVisual();
+            this.jatekter.Initialize();
+            this.jatekter.InvalidateVisual();
         }
     }
 }

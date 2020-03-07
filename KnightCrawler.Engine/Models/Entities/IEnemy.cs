@@ -1,12 +1,16 @@
-﻿using KnightCrawler.Engine.Models.Behaviours;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// <copyright file="IEnemy.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace KnightCrawler.Engine.Models.Entities
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using KnightCrawler.Engine.Models.Behaviours;
+
     /// <summary>
     /// An enemy that is trying to hurt the player.
     /// </summary>

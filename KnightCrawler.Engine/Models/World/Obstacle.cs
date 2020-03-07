@@ -1,8 +1,8 @@
-﻿// <copyright file="Entity.cs" company="PlaceholderCompany">
+﻿// <copyright file="Obstacle.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace KnightCrawler.Engine.Models.Entities
+namespace KnightCrawler.Engine.Models.World.Obstacles
 {
     using System;
     using System.Collections.Generic;
@@ -10,16 +10,14 @@ namespace KnightCrawler.Engine.Models.Entities
     using System.Text;
     using System.Threading.Tasks;
     using System.Windows;
+    using GalaSoft.MvvmLight;
 
     /// <summary>
-    /// An entity that can be drawn on the map.
+    /// An obstacle found in rooms restricting movement.
     /// </summary>
-    public abstract class Entity : IEntity
+    public class Obstacle : FloorTile
     {
         /// <inheritdoc/>
-        public Point Location { get; set; }
-
-        /// <inheritdoc/>
-        public Size Size { get; set; }
+        public override bool BlocksEntities => true;
     }
 }

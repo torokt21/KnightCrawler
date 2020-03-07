@@ -1,4 +1,8 @@
-﻿namespace KnightCrawler.Engine.Models.EventArgs
+﻿// <copyright file="KilledEventArgs.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace KnightCrawler.Engine.Models.EventArgs
 {
     using System;
     using System.Collections.Generic;

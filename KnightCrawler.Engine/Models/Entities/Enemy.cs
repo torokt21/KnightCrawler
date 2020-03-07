@@ -1,4 +1,8 @@
-﻿namespace KnightCrawler.Engine.Models.Entities
+﻿// <copyright file="Enemy.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace KnightCrawler.Engine.Models.Entities
 {
     using System;
     using System.Collections.Generic;
@@ -8,6 +12,9 @@
     using System.Windows;
     using KnightCrawler.Engine.Models.Behaviours;
 
+    /// <summary>
+    /// An enemy trying to kill the player.
+    /// </summary>
     public abstract class Enemy : Entity, IEnemy
     {
         /// <summary>
@@ -27,7 +34,11 @@
         /// <inheritdoc/>
         public IEnemyMovementBehaviour MovementBehaviour { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
-        public virtual void OnTick()
+        /// <summary>
+        /// Handles every action of the enemy on every tick.
+        /// </summary>
+        /// <param name="deltaTime">The time elapsed since the last tick in miliseconds.</param>
+        public virtual void OnTick(double deltaTime)
         {
             this.AttackBehaviour.OnTick();
             this.MovementBehaviour.OnTick();

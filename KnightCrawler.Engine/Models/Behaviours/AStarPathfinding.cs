@@ -1,4 +1,8 @@
-﻿namespace KnightCrawler.Engine.Models.Behaviours
+﻿// <copyright file="AStarPathFinding.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace KnightCrawler.Engine.Models.Behaviours
 {
     using System;
     using System.Collections.Generic;
@@ -31,10 +35,9 @@
             }
         }
 
-
         public void FindPath()
         {
-
+            // TODO - Implement A*
         }
     }
 }

@@ -1,4 +1,8 @@
-﻿namespace KnightCrawler.Engine.Models.Entities
+﻿// <copyright file="KillableEntity.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace KnightCrawler.Engine.Models.Entities
 {
     using System;
     using System.Collections.Generic;
@@ -20,6 +24,11 @@
         /// Gets or sets the healthpoints of the entity.
         /// </summary>
         public double Health { get; set; }
+
+        /// <summary>
+        /// Gets the maximum healthpoints of the entity.
+        /// </summary>
+        public double MaxHealth { get; }
 
         /// <summary>
         /// Damages the entity by the given amount.

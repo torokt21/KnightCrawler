@@ -5,9 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KnightCrawler.Wpf"
         mc:Ignorable="d"
-        Background="Black"
+        Background="#121212"
+        Foreground="White"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <local:GameRenderer RenderOptions.BitmapScalingMode="NearestNeighbor" x:Name="jatekter"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <Border BorderBrush="#333333" BorderThickness="2">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Foreground="White">HP:</Label>
+                    <Image Source="C:\Users\torokt21\Source\Repos\torokt21\KnightCrawler\KnightCrawler.Wpf\bin\Debug\ui_heart_full.png" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                    <Image Source="C:\Users\torokt21\Source\Repos\torokt21\KnightCrawler\KnightCrawler.Wpf\bin\Debug\ui_heart_full.png" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                    <Image Source="C:\Users\torokt21\Source\Repos\torokt21\KnightCrawler\KnightCrawler.Wpf\bin\Debug\ui_heart_half.png" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                    <Image Source="C:\Users\torokt21\Source\Repos\torokt21\KnightCrawler\KnightCrawler.Wpf\bin\Debug\ui_heart_empty.png" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+        
+
+        <Border BorderBrush="#333333" BorderThickness="2" Grid.Column="1">
+            <Label>Map?</Label>
+        </Border>
+
+        <local:GameRenderer Grid.Row="1" Grid.ColumnSpan="2" RenderOptions.BitmapScalingMode="NearestNeighbor" x:Name="jatekter">
+        </local:GameRenderer>
     </Grid>
 </Window>

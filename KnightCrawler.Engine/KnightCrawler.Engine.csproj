@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>oenik.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,6 +30,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>oenik.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CommonServiceLocator, Version=2.0.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
@@ -58,8 +60,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseNotificationClass.cs" />
-    <Compile Include="Factories\EnemyFactory.cs" />
-    <Compile Include="Factories\FloorFactory.cs" />
+    <Compile Include="Factories\EntityFactory.cs" />
+    <Compile Include="Factories\TileFactory.cs" />
     <Compile Include="Models\Behaviours\AStarPathFinding.cs" />
     <Compile Include="Models\Behaviours\EnemyBehaviour.cs" />
     <Compile Include="Models\Behaviours\IEnemyBehaviour.cs" />
@@ -72,17 +74,18 @@
     <Compile Include="Models\Entities\KillableEntity.cs" />
     <Compile Include="Models\Entities\Player.cs" />
     <Compile Include="Models\EventArgs\KilledEventArgs.cs" />
-    <Compile Include="Models\World\Obstacles\IObstacle.cs" />
-    <Compile Include="Models\World\Obstacles\Obstacle.cs" />
-    <Compile Include="Models\World\Obstacles\Stone.cs" />
+    <Compile Include="Models\World\EmptyTile.cs" />
+    <Compile Include="Models\World\FloorTile.cs" />
+    <Compile Include="Models\World\Obstacle.cs" />
     <Compile Include="Models\World\Room.cs" />
     <Compile Include="Models\Utilities.cs" />
     <Compile Include="Models\World\Floor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="oenik.ruleset" />
     <None Include="packages.config" />
-    <None Include="stylecop.json" />
+    <AdditionalFiles Include="stylecop.json" />
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\StyleCop.Analyzers.1.1.118\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />

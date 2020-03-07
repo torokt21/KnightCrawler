@@ -1,4 +1,8 @@
-﻿namespace KnightCrawler.Engine
+﻿// <copyright file="BaseNotificationClass.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace KnightCrawler.Engine
 {
     using System.ComponentModel;
     using System.Runtime.CompilerServices;
