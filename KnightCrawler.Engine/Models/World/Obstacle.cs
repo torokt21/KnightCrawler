@@ -4,14 +4,6 @@
 
 namespace KnightCrawler.Engine.Models.World
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using System.Windows;
-    using GalaSoft.MvvmLight;
-
     /// <summary>
     /// An obstacle found in rooms restricting movement.
     /// </summary>

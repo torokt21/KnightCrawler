@@ -4,12 +4,6 @@
 
 namespace KnightCrawler.Engine.Factories
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using KnightCrawler.Engine.Models.Behaviours;
     using KnightCrawler.Engine.Models.Entities;
     using KnightCrawler.Engine.Models.Entities.Enemies;
 

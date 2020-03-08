@@ -4,12 +4,6 @@
 
 namespace KnightCrawler.Engine.Models.Entities
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using System.Windows;
     using KnightCrawler.Engine.Models.Behaviours;
 
     /// <summary>
@@ -22,7 +16,7 @@ namespace KnightCrawler.Engine.Models.Entities
         /// </summary>
         /// <param name="movementBehaviour">The enemy's movement behaviour.</param>
         /// <param name="attackBehaviour">The enemy's arrack behaviour.</param>
-        public Enemy(IEnemyMovementBehaviour movementBehaviour, IEnemyBehaviour attackBehaviour)
+        protected Enemy(IEnemyMovementBehaviour movementBehaviour, IEnemyBehaviour attackBehaviour)
         {
             this.AttackBehaviour = attackBehaviour;
             this.MovementBehaviour = movementBehaviour;

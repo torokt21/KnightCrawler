@@ -7,9 +7,6 @@ namespace KnightCrawler.Engine.Models.World
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     using KnightCrawler.Engine.Factories;
     using KnightCrawler.Engine.Models.Entities;
 

@@ -4,13 +4,6 @@
 
 namespace KnightCrawler.Engine.Models.Behaviours
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-    using System.Windows;
-
     /// <summary>
     /// The movement behaciour for implementing the A* pathfinding algorithm.
     /// </summary>
@@ -35,6 +28,9 @@ namespace KnightCrawler.Engine.Models.Behaviours
             }
         }
 
+        /// <summary>
+        /// Find path.
+        /// </summary>
         public void FindPath()
         {
             // TODO - Implement A*
