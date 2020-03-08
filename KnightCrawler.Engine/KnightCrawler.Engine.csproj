@@ -59,7 +59,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseNotificationClass.cs" />
     <Compile Include="Factories\EntityFactory.cs" />
     <Compile Include="Factories\TileFactory.cs" />
     <Compile Include="Models\Behaviours\AStarPathFinding.cs" />

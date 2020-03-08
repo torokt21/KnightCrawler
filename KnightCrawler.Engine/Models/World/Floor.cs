@@ -16,21 +16,28 @@ namespace KnightCrawler.Engine.Models.World
     public class Floor
     {
         /// <summary>
+        /// Initializes a new instance of the <see cref="Floor"/> class.
+        /// </summary>
+        /// <param name="difficulty">The difficulty of the floor.</param>
+        public Floor(int difficulty)
+        {
+            this.Difficulty = difficulty;
+            this.Generate();
+        }
+
+        /// <summary>
         /// Gets the current room.
         /// </summary>
         public Room ActiveRoom { get; private set; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Floor"/> class.
+        /// Gets the difficulty of the current floor.
         /// </summary>
-        public Floor()
-        {
-            this.Generate();
-        }
+        public int Difficulty { get; }
 
         private void Generate()
         {
-            // TODO
+            // TODO - generate floor respecting the floor difficulty
             Room r = new Room("rooms/0000.txt");
         }
     }

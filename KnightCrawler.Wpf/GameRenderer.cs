@@ -8,6 +8,7 @@ namespace KnightCrawler.Wpf
     using System.Threading.Tasks;
     using System.Windows;
     using System.Windows.Media;
+    using System.Windows.Media.Animation;
     using System.Windows.Media.Imaging;
 
     class GameRenderer : FrameworkElement
@@ -23,9 +24,14 @@ namespace KnightCrawler.Wpf
         ImageBrush wallTopLeftBrush;
         ImageBrush wallTopColumnBrush;
         ImageBrush wallTopMidBrush;
+        ImageBrush knightBrush;
+
+        BitmapImage knightImage;
 
         public void Initialize()
         {
+            knightImage = new BitmapImage(new Uri("Images/Assets/knight_f_idle_anim.gif", UriKind.RelativeOrAbsolute));
+
             for(int i = 0; i < floorBrushes.Length; i++)
             {
                 this.floorBrushes[i] = new ImageBrush(
@@ -40,6 +46,12 @@ namespace KnightCrawler.Wpf
                     new Uri(
                         "wall_mid.png",
                         UriKind.RelativeOrAbsolute)));
+
+            knightBrush = new ImageBrush(
+    new BitmapImage(
+        new Uri(
+            "Images/Assets/knight_f_idle_anim.gif",
+            UriKind.RelativeOrAbsolute)));
 
             wallTopRightBrush = new ImageBrush(
                 new BitmapImage(
@@ -114,9 +126,13 @@ namespace KnightCrawler.Wpf
 
                         }
                     }
-                    
+
+                    drawingContext.DrawImage(knightImage, new Rect(200, 200, blockHeight, blockHeight));
+
                 }
             }
+
+
         }
     }
 }
