@@ -24,6 +24,7 @@ namespace KnightCrawler.Engine.Models.World
         /// <summary>
         /// Initializes a new instance of the <see cref="Room"/> class.
         /// </summary>
+        /// <param name="fileName">The name of the file to load.</param>
         public Room(string fileName)
         {
             // TODO - all layouts should be loaded when the application starts. Then each room instance would get a layout based on which directions are open
@@ -44,6 +45,18 @@ namespace KnightCrawler.Engine.Models.World
         /// Gets or sets the 2D array containing the layout of the floor obstacles.
         /// </summary>
         public FloorTile[,] FloorTiles { get; set; }
+
+        /// <summary>
+        /// Gets or sets the tile in the specified index of the room.
+        /// </summary>
+        /// <param name="y">The y location.</param>
+        /// <param name="x">The x location.</param>
+        /// <returns>The floor tile.</returns>
+        public FloorTile this[int y, int x]
+        {
+            get => this.FloorTiles[y, x];
+            set => this.FloorTiles[y, x] = value;
+        }
 
         /// <summary>
         /// Loads the layout of the room from a specified file.
