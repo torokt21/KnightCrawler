@@ -4,8 +4,8 @@
 
 namespace KnightCrawler.Engine.Factories
 {
+    using KnightCrawler.Engine.Models.Behaviours;
     using KnightCrawler.Engine.Models.Entities;
-    using KnightCrawler.Engine.Models.Entities.Enemies;
 
     /// <summary>
     /// The factory class producing enemy entities.
@@ -15,14 +15,26 @@ namespace KnightCrawler.Engine.Factories
         /// <summary>
         /// Creates an instance of an entity base on the letter representing it.
         /// </summary>
-        /// <param name="c">The character representing an entity.</param>
+        /// <param name="startingInfo">The information required to create the entity.</param>
         /// <returns>New instance.</returns>
-        public static Entity GetInstanceOrNull(char c)
+        public static Entity GetInstanceOrNull(EntityStartingInfo startingInfo)
         {
-            switch (c.ToString().ToLower()[0])
+            // TODO add attack behaviours
+            switch (startingInfo.Type)
             {
-                case 'g':
-                    return new Goblin();
+                case EntityType.Goblin:
+                    return new Enemy(
+                        startingInfo.StartingPosition,
+                        MovementType.AStarPathfinding,
+                        null,
+                        0.2);
+
+                case EntityType.Skeleton:
+                    break;
+                case EntityType.Spectre:
+                    break;
+                case EntityType.Ogre:
+                    break;
             }
 
             return null;

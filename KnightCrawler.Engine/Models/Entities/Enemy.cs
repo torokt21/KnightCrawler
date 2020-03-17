@@ -4,29 +4,41 @@
 
 namespace KnightCrawler.Engine.Models.Entities
 {
+    using System.Windows;
+    using KnightCrawler.Engine.Factories;
     using KnightCrawler.Engine.Models.Behaviours;
 
     /// <summary>
     /// An enemy trying to kill the player.
     /// </summary>
-    public abstract class Enemy : Entity, IEnemy
+    public class Enemy : Entity, IEnemy
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Enemy"/> class.
         /// </summary>
-        /// <param name="movementBehaviour">The enemy's movement behaviour.</param>
-        /// <param name="attackBehaviour">The enemy's arrack behaviour.</param>
-        protected Enemy(IEnemyMovementBehaviour movementBehaviour, IEnemyBehaviour attackBehaviour)
+        /// <param name="startingInfo">The starting info of the enemy.</param>
+        /// <param name="movementBehaviourType">The enemy's movement behaviour type.</param>
+        /// <param name="attackBehaviour">The enemy's attack behaviour.</param>
+        /// <param name="speed">The speed of the enemy.</param>
+        /// <param name="startingPos">The starting position of the enemy.</param>
+        public Enemy(
+            Point startingPos,
+            MovementType movementBehaviourType,
+            IEntityBehaviour attackBehaviour,
+            double speed)
+            : base(startingPos)
         {
             this.AttackBehaviour = attackBehaviour;
-            this.MovementBehaviour = movementBehaviour;
+
+            // Creating an instance of the movement behaviour based on the movement type.
+            this.MovementBehaviour = MovementBehaviourFactory.GetBehaviourInstance(movementBehaviourType, this, speed);
         }
 
         /// <inheritdoc/>
-        public IEnemyBehaviour AttackBehaviour { get; set; }
+        public IEntityBehaviour AttackBehaviour { get; set; }
 
         /// <inheritdoc/>
-        public IEnemyMovementBehaviour MovementBehaviour { get; set; }
+        public EntityMovementBehaviour MovementBehaviour { get; set; }
 
         /// <summary>
         /// Handles every action of the enemy on every tick.

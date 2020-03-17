@@ -4,23 +4,33 @@
 
 namespace KnightCrawler.Engine.Models.Behaviours
 {
+    using KnightCrawler.Engine.Models.Entities;
+    using KnightCrawler.Engine.Models.World;
+
     /// <summary>
     /// The movement behaciour for implementing the A* pathfinding algorithm.
     /// </summary>
-    internal class AStarPathFinding : IEnemyMovementBehaviour
+    internal class AStarPathFinding : EntityMovementBehaviour
     {
         /// <summary>
-        /// Determines how often the enemy recalculates the route to the player.
+        /// Determines after how many ticks the enemy recalculates the route to the player.
         /// </summary>
         private const int RecalculateEveryXTick = 5;
 
         private int recalculateCounter = 0;
 
-        /// <inheritdoc/>
-        public double Speed { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AStarPathFinding"/> class.
+        /// </summary>
+        /// <param name="speed">The speed of the enemy.</param>
+        /// <param name="entity">The entity.</param>
+        public AStarPathFinding(double speed, Entity entity)
+            : base(speed, entity)
+        {
+        }
 
         /// <inheritdoc/>
-        public void OnTick()
+        public override void OnTick()
         {
             if (this.recalculateCounter++ >= RecalculateEveryXTick)
             {

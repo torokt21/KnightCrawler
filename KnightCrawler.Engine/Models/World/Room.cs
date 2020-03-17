@@ -32,7 +32,7 @@ namespace KnightCrawler.Engine.Models.World
         public Room(string fileName)
         {
             // TODO - all layouts should be loaded when the application starts. Then each room instance would get a layout based on which directions are clear
-            this.LoadLayout(fileName);
+            //this.LoadLayout(fileName);
         }
 
         /// <summary>
@@ -62,53 +62,10 @@ namespace KnightCrawler.Engine.Models.World
             set => this.FloorTiles[y, x] = value;
         }
 
-        /// <summary>
-        /// Loads the layout of the room from a specified file.
-        /// </summary>
-        /// <param name="filename">The file to load the layout from.</param>
-        public void LoadLayout(string filename)
+        public void Spawn(Entity entity)
         {
-            this.FloorTiles = new FloorTile[RoomHeigth, RoomWidth];
-            if (string.IsNullOrWhiteSpace(filename))
-            {
-                throw new ArgumentException("Invalid filename", nameof(filename));
-            }
-
-            using (StreamReader reader = new StreamReader(filename))
-            {
-                // Reading all lines of the file
-                string[] lines = reader.ReadToEnd()
-                    .Trim()
-                    .Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
-
-                for (int y = 0; y < lines.Length; y++)
-                {
-                    for (int x = 0; x < lines[y].Length; x++)
-                    {
-                        // Getting tile from character
-                        FloorTile tile = TileFactory.CreateInstanceOrNull(lines[y][x]);
-
-                        // If the character found is not a valid tile, it must be a different entity
-                        if (tile == null)
-                        {
-                            tile = new EmptyTile();
-
-                            Entity entity = EntityFactory.GetInstanceOrNull(lines[y][x]);
-
-                            if (entity != null)
-                            {
-                                this.Entities.Add(entity);
-                            }
-                            else
-                            {
-                                throw new Exception("Unexpected character in map file: " + lines[y][x]);
-                            }
-                        }
-
-                        this.FloorTiles[y, x] = tile;
-                    }
-                }
-            }
+            Entities.Add(entity);
+            entity.Spawn(this);
         }
     }
 }

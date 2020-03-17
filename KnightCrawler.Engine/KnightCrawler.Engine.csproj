@@ -60,21 +60,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Factories\EntityFactory.cs" />
+    <Compile Include="Factories\MovementBehaviourFactory.cs" />
     <Compile Include="Factories\TileFactory.cs" />
     <Compile Include="Models\Behaviours\AStarPathFinding.cs" />
-    <Compile Include="Models\Behaviours\EnemyBehaviour.cs" />
-    <Compile Include="Models\Behaviours\IEnemyBehaviour.cs" />
-    <Compile Include="Models\Behaviours\IEnemyMovementBehaviour.cs" />
-    <Compile Include="Models\Entities\Enemies\Goblin.cs" />
+    <Compile Include="Models\Behaviours\BehaviourTypes.cs" />
+    <Compile Include="Models\Behaviours\EntityBehaviour.cs" />
+    <Compile Include="Models\Behaviours\IEntityBehaviour.cs" />
+    <Compile Include="Models\Behaviours\EntityMovementBehaviour.cs" />
     <Compile Include="Models\Entities\Enemy.cs" />
     <Compile Include="Models\Entities\Entity.cs" />
+    <Compile Include="Models\Entities\EntityStartingInfo.cs" />
     <Compile Include="Models\Entities\IEnemy.cs" />
     <Compile Include="Models\Entities\IEntity.cs" />
     <Compile Include="Models\Entities\KillableEntity.cs" />
     <Compile Include="Models\Entities\Player.cs" />
+    <Compile Include="Models\Entities\Types.cs" />
     <Compile Include="Models\EventArgs\KilledEventArgs.cs" />
     <Compile Include="Models\World\EmptyTile.cs" />
     <Compile Include="Models\World\FloorTile.cs" />
+    <Compile Include="Models\World\Layout.cs" />
     <Compile Include="Models\World\Obstacle.cs" />
     <Compile Include="Models\World\Room.cs" />
     <Compile Include="Models\Utilities.cs" />

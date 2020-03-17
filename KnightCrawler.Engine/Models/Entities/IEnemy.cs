@@ -14,11 +14,11 @@ namespace KnightCrawler.Engine.Models.Entities
         /// <summary>
         /// Gets or sets the movement behaviour of the enemy.
         /// </summary>
-        IEnemyMovementBehaviour MovementBehaviour { get; set; }
+        EntityMovementBehaviour MovementBehaviour { get; set; }
 
         /// <summary>
         /// Gets or sets the movement behaviour of the enemy.
         /// </summary>
-        IEnemyBehaviour AttackBehaviour { get; set; }
+        IEntityBehaviour AttackBehaviour { get; set; }
     }
 }

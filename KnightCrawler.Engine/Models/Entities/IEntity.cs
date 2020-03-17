@@ -5,6 +5,7 @@
 namespace KnightCrawler.Engine.Models.Entities
 {
     using System.Windows;
+    using KnightCrawler.Engine.Models.World;
 
     /// <summary>
     /// An entity which has a location on the map.
@@ -20,5 +21,11 @@ namespace KnightCrawler.Engine.Models.Entities
         /// Gets or sets the size of the entity.
         /// </summary>
         Size Size { get; set; }
+
+        /// <summary>
+        /// Spawns the enemy in a room.
+        /// </summary>
+        /// <param name="room">The room to spawn in.</param>
+        void Spawn(Room room);
     }
 }

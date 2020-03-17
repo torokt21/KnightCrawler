@@ -10,20 +10,18 @@ namespace KnightCrawler.Engine.Models.Behaviours
     /// <summary>
     /// Defines a behaviour of an enemy.
     /// </summary>
-    internal abstract class EnemyBehaviour : IEnemyBehaviour
+    public abstract class EntityBehaviour : IEntityBehaviour
     {
-        private readonly Room room;
-        private readonly Enemy enemy;
+        private readonly Entity entity;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="EnemyBehaviour"/> class.
+        /// Initializes a new instance of the <see cref="EntityBehaviour"/> class.
         /// </summary>
         /// <param name="room">The room the enemy is in.</param>
-        /// <param name="enemy">The enemy.</param>
-        public EnemyBehaviour(Room room, Enemy enemy)
+        /// <param name="entity">The enemy.</param>
+        public EntityBehaviour(Entity entity)
         {
-            this.room = room;
-            this.enemy = enemy;
+            this.entity = entity;
         }
 
         /// <inheritdoc/>
