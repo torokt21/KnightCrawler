@@ -1,4 +1,4 @@
-﻿// <copyright file="EnemyBehaviour.cs" company="PlaceholderCompany">
+﻿// <copyright file="EntityBehaviour.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 

@@ -28,7 +28,7 @@ namespace KnightCrawler.Engine.Models.Entities
         public Size Size { get; set; }
 
         /// <summary>
-        /// THe room the entity is in.
+        /// Gets or sets the room the entity is in.
         /// </summary>
         internal Room Room { get; set; }
 

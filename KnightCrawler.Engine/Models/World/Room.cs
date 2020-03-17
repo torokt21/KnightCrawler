@@ -62,9 +62,13 @@ namespace KnightCrawler.Engine.Models.World
             set => this.FloorTiles[y, x] = value;
         }
 
+        /// <summary>
+        /// Spawns the entity in the room. Must be called.
+        /// </summary>
+        /// <param name="entity">The entity to spawn.</param>
         public void Spawn(Entity entity)
         {
-            Entities.Add(entity);
+            this.Entities.Add(entity);
             entity.Spawn(this);
         }
     }

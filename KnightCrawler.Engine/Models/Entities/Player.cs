@@ -13,7 +13,8 @@ namespace KnightCrawler.Engine.Models.Entities
         /// Initializes a new instance of the <see cref="Player"/> class.
         /// </summary>
         /// <param name="name">The name of the player.</param>
-        public Player(string name) : base(new System.Windows.Point(0,0))
+        public Player(string name)
+            : base(new System.Windows.Point(0, 0))
         {
             this.Name = name;
         }

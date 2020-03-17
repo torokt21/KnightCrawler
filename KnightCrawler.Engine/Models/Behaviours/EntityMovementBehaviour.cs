@@ -1,4 +1,8 @@
-﻿namespace KnightCrawler.Engine.Models.Behaviours
+﻿// <copyright file="EntityMovementBehaviour.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace KnightCrawler.Engine.Models.Behaviours
 {
     using System;
     using System.Collections.Generic;
@@ -8,6 +12,9 @@
     using KnightCrawler.Engine.Models.Entities;
     using KnightCrawler.Engine.Models.World;
 
+    /// <summary>
+    /// The abstract base class for movement behaviours.
+    /// </summary>
     public abstract class EntityMovementBehaviour : EntityBehaviour
     {
         /// <summary>
