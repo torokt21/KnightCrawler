@@ -5,14 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KnightCrawler.Wpf"
         mc:Ignorable="d"
-        Background="#121212"
+        Background="#2c2c2c"
         Foreground="White"
         WindowState="Maximized"
+        FontSize="24"
+        FontFamily="/KnightCrawler.Wpf;component/#Yoster Island"
+        WindowStyle="None"
         Icon="pack://application:,,,/KnightCrawler.Wpf;component/Images/knightcrawler.ico"
         Title="KnightCrawler" Width="940" Height="600" >
-    <Grid>
+        <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
+            <RowDefinition MaxHeight="100" Height="1*"/>
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
 
@@ -20,24 +23,121 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>
-        <Border BorderBrush="#333333" BorderThickness="2">
-            <StackPanel>
-                <StackPanel Orientation="Horizontal">
+        <Border Padding="5 10 10 0" BorderBrush="#333333" BorderThickness="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                
+                <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
                     <Label Foreground="White">HP:</Label>
-                    <Image Source="C:\Users\torokt21\Source\Repos\torokt21\KnightCrawler\KnightCrawler.Wpf\bin\Debug\ui_heart_full.png" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
-                    <Image Source="C:\Users\torokt21\Source\Repos\torokt21\KnightCrawler\KnightCrawler.Wpf\bin\Debug\ui_heart_full.png" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
-                    <Image Source="C:\Users\torokt21\Source\Repos\torokt21\KnightCrawler\KnightCrawler.Wpf\bin\Debug\ui_heart_half.png" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
-                    <Image Source="C:\Users\torokt21\Source\Repos\torokt21\KnightCrawler\KnightCrawler.Wpf\bin\Debug\ui_heart_empty.png" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                    <Image Width="30" Source="C:\Users\torokt21\Source\Repos\torokt21\KnightCrawler\KnightCrawler.Wpf\bin\Debug\ui_heart_full.png" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                    <Image Width="30" Source="C:\Users\torokt21\Source\Repos\torokt21\KnightCrawler\KnightCrawler.Wpf\bin\Debug\ui_heart_full.png" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                    <Image Width="30" Source="C:\Users\torokt21\Source\Repos\torokt21\KnightCrawler\KnightCrawler.Wpf\bin\Debug\ui_heart_half.png" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+                    <Image Width="30" Source="C:\Users\torokt21\Source\Repos\torokt21\KnightCrawler\KnightCrawler.Wpf\bin\Debug\ui_heart_empty.png" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
                 </StackPanel>
-            </StackPanel>
+
+                <Label Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="White">Floor 2</Label>
+
+                <StackPanel Grid.Row="1" Orientation="Horizontal">
+                    <Border Width="50" 
+                            Height="50"
+                            Padding="4"
+                            Background="LightGray"
+                            BorderBrush="#555555" 
+                            BorderThickness="4"
+                            CornerRadius="5">
+                        <Image VerticalAlignment="Bottom" Source="c:\Users\torokt21\OneDrive - Óbudai egyetem\SULI\2019-2020-2felev\prog4\BEAD\RealConcept\DungeonTileset\weapon_lavish_sword.png"></Image>
+                    </Border>
+
+                    <Border Margin="10 0"
+                        Width="50" 
+                            Height="50"
+                            Padding="4"
+                            Background="Gray"
+                            BorderBrush="#222222" 
+                            BorderThickness="4"
+                            CornerRadius="5">
+                        <Image VerticalAlignment="Bottom" Source="c:\Users\torokt21\OneDrive - Óbudai egyetem\SULI\2019-2020-2felev\prog4\BEAD\RealConcept\DungeonTileset\weapon_green_magic_staff.png"/>
+                    </Border>
+                </StackPanel>
+
+                <Label Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Foreground="White">Score: 512</Label>
+
+            </Grid>
         </Border>
         
 
         <Border BorderBrush="#333333" BorderThickness="2" Grid.Column="1">
-            <Label>Map?</Label>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Border Background="#bbbbbb"
+                        BorderBrush="Black"
+                        BorderThickness="2"
+                        CornerRadius="3"
+                        Grid.Row="2" 
+                        Grid.Column="2"/>
+
+                <Border Background="#7c7c7c"
+                        BorderBrush="Black"
+                        BorderThickness="2"
+                        CornerRadius="3"
+                        Grid.Row="3" 
+                        Grid.Column="0"/>
+
+                <Border Background="#7c7c7c"
+                        BorderBrush="Black"
+                        BorderThickness="2"
+                        CornerRadius="3"
+                        Grid.Row="2" 
+                        Grid.Column="1"/>
+
+                <Border Background="#7c7c7c"
+                        BorderBrush="Black"
+                        BorderThickness="2"
+                        CornerRadius="3"
+                        Grid.Row="2" 
+                        Grid.Column="0"/>
+                
+                <Border Background="#4a4a4a"
+                        BorderBrush="Black"
+                        BorderThickness="2"
+                        CornerRadius="3"
+                        Grid.Row="0" 
+                        Grid.Column="1"/>
+
+                <Border Background="#7c7c7c"
+                        BorderBrush="Black"
+                        BorderThickness="2"
+                        CornerRadius="3"
+                        Grid.Row="1" 
+                        Grid.Column="1"/>
+            </Grid>
         </Border>
 
-        <local:GameRenderer Grid.Row="1" Grid.ColumnSpan="2" RenderOptions.BitmapScalingMode="NearestNeighbor" x:Name="jatekter">
-        </local:GameRenderer>
+            
+        <!--<local:GameRenderer Grid.Row="1" Grid.ColumnSpan="2" RenderOptions.BitmapScalingMode="NearestNeighbor" x:Name="jatekter"/>-->
+        <Image Grid.Row="1" Grid.ColumnSpan="2" Source="c:\Users\torokt21\OneDrive - Óbudai egyetem\SULI\2019-2020-2felev\prog4\BEAD\RealConcept\concept-map.png"></Image>
     </Grid>
 </Window>

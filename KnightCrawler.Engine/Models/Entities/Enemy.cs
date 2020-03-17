@@ -34,8 +34,8 @@ namespace KnightCrawler.Engine.Models.Entities
         /// <param name="deltaTime">The time elapsed since the last tick in miliseconds.</param>
         public virtual void OnTick(double deltaTime)
         {
-            this.AttackBehaviour.OnTick();
-            this.MovementBehaviour.OnTick();
+            this.AttackBehaviour?.OnTick();
+            this.MovementBehaviour?.OnTick();
         }
     }
 }

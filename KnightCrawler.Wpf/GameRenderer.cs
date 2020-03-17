@@ -127,7 +127,7 @@ namespace KnightCrawler.Wpf
                         }
                     }
 
-                    drawingContext.DrawImage(knightImage, new Rect(200, 200, blockHeight, blockHeight));
+                    drawingContext.DrawImage(knightImage, new Rect(5 *blockHeight, 8 * blockHeight - 20, blockHeight, blockHeight * 1.2));
 
                 }
             }

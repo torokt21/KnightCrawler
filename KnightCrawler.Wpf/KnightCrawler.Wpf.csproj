@@ -94,6 +94,7 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AdditionalFiles Include="stylecop.json" />
+    <Resource Include="yoster.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

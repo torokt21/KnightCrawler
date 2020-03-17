@@ -15,8 +15,15 @@ namespace KnightCrawler.Engine.Models.World
     /// </summary>
     public class Room
     {
-        private const int RoomHeigth = 10;
-        private const int RoomWidth = 15;
+        /// <summary>
+        /// The number of tiles in a room vertically.
+        /// </summary>
+        public const int RoomHeigth = 10;
+
+        /// <summary>
+        /// The number of tiles in a room horizontally.
+        /// </summary>
+        public const int RoomWidth = 15;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Room"/> class.
@@ -24,7 +31,7 @@ namespace KnightCrawler.Engine.Models.World
         /// <param name="fileName">The name of the file to load.</param>
         public Room(string fileName)
         {
-            // TODO - all layouts should be loaded when the application starts. Then each room instance would get a layout based on which directions are open
+            // TODO - all layouts should be loaded when the application starts. Then each room instance would get a layout based on which directions are clear
             this.LoadLayout(fileName);
         }
 

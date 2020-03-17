@@ -14,7 +14,7 @@ namespace KnightCrawler.Engine.Models.Behaviours
         /// </summary>
         private const int RecalculateEveryXTick = 5;
 
-        private int recalculateSlower = 0;
+        private int recalculateCounter = 0;
 
         /// <inheritdoc/>
         public double Speed { get; set; }
@@ -22,8 +22,9 @@ namespace KnightCrawler.Engine.Models.Behaviours
         /// <inheritdoc/>
         public void OnTick()
         {
-            if (this.recalculateSlower++ >= RecalculateEveryXTick)
+            if (this.recalculateCounter++ >= RecalculateEveryXTick)
             {
+                this.recalculateCounter = 0;
                 this.FindPath();
             }
         }

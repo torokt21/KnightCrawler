@@ -28,7 +28,7 @@ namespace KnightCrawler.Wpf
             this.ViewModel = new GameViewModel();
             this.DataContext = this.ViewModel;
 
-            this.jatekter.Initialize();
+            //this.jatekter.Initialize();
 
             this.timer = new DispatcherTimer();
             this.timer.Interval = TimeSpan.FromMilliseconds(20);
@@ -43,7 +43,7 @@ namespace KnightCrawler.Wpf
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            this.jatekter.InvalidateVisual();
+            //this.jatekter.InvalidateVisual();
         }
     }
 }
