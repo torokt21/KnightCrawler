@@ -32,7 +32,7 @@ namespace KnightCrawler.Engine.Models.World
         public Room(string fileName)
         {
             // TODO - all layouts should be loaded when the application starts. Then each room instance would get a layout based on which directions are clear
-            //this.LoadLayout(fileName);
+            // this.LoadLayout(fileName);
         }
 
         /// <summary>

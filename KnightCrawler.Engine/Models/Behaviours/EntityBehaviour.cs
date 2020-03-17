@@ -8,7 +8,7 @@ namespace KnightCrawler.Engine.Models.Behaviours
     using KnightCrawler.Engine.Models.World;
 
     /// <summary>
-    /// Defines a behaviour of an enemy.
+    /// Defines a behaviour of an entity.
     /// </summary>
     public abstract class EntityBehaviour : IEntityBehaviour
     {
