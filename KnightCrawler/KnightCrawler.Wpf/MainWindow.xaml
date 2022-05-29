@@ -1,0 +1,28 @@
+﻿<Window x:Class="KnightCrawler.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KnightCrawler.Wpf"
+        xmlns:localvm="clr-namespace:KnightCrawler.Engine.Models;assembly=KnightCrawler.Engine"
+
+        mc:Ignorable="d"
+        Background="#2c2c2c"
+        Foreground="White"
+
+        WindowStyle="None"
+        WindowState="Maximized"
+
+        FontSize="24"
+        FontFamily="/KnightCrawler.Wpf;component/#Yoster Island"
+        Icon="pack://application:,,,/KnightCrawler.Wpf;component/Images/knightcrawler.ico"
+        Title="KnightCrawler" Width="940" Height="600">
+
+    <Grid>
+        <Frame
+             Name="frm"
+
+             NavigationUIVisibility="Hidden">
+        </Frame>
+    </Grid>
+</Window>

@@ -1,0 +1,106 @@
+﻿<Page x:Class="KnightCrawler.Wpf.Upgrades"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:KnightCrawler.Wpf"
+      xmlns:engine="clr-namespace:KnightCrawler.Engine.Models.Entities;assembly=KnightCrawler.Engine"
+      mc:Ignorable="d"
+      FontSize="24"
+      FontFamily="/KnightCrawler.Wpf;component/#Yoster Island"
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="Upgrades">
+
+    <Page.Resources>
+    </Page.Resources>
+    <Grid   RenderOptions.BitmapScalingMode="NearestNeighbor">
+        <Grid.Background>
+            <ImageBrush ImageSource="pack://application:,,,/KnightCrawler.Wpf;component/Images/knigh.png" />
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="650" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="800" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.Background>
+                <ImageBrush ImageSource="pack://application:,,,/KnightCrawler.Wpf;component/Images/UIHere.png" />
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="3*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Column="1" Grid.Row="1">
+                <Label HorizontalContentAlignment="Center" VerticalContentAlignment="Center">Choose ONE to upgrade!</Label>
+            </Grid>
+            <Grid Grid.Column="1" Grid.Row="2" RenderOptions.BitmapScalingMode="NearestNeighbor">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="7*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0">
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Grid.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="pack://application:,,,/KnightCrawler.Wpf;component/Images/Assets/flask_green.png" />
+                    </Grid.Background>
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <Grid.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="pack://application:,,,/KnightCrawler.Wpf;component/Images/Assets/flask_big_blue.png" />
+                    </Grid.Background>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="0">
+                    <Grid.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="pack://application:,,,/KnightCrawler.Wpf;component/Images/Assets/flask_yellow.png" />
+                    </Grid.Background>
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="0">
+                    <Grid.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="pack://application:,,,/KnightCrawler.Wpf;component/Images/Assets/flask_big_green.png" />
+                    </Grid.Background>
+                </Grid>
+                <Grid Grid.Row="4" Grid.Column="0">
+                    <Grid.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="pack://application:,,,/KnightCrawler.Wpf;component/Images/Assets\flask_big_red.png" />
+                    </Grid.Background>
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Button Command="{Binding}" Click="Button_Click" Tag="{x:Static engine:PlayerStats+UpgradablePlayerStat.MaxHealth}"  Content="Max Health" Margin="5" BorderThickness="0" Background="Transparent" />
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <Button Command="{Binding }" Click="Button_Click" Tag="{x:Static engine:PlayerStats+UpgradablePlayerStat.Speed}" Content="Speed" Margin="5" BorderThickness="0" Background="Transparent" />
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="1">
+                    <Button Command="{Binding }" Click="Button_Click" Tag="{x:Static engine:PlayerStats+UpgradablePlayerStat.SwingRate}" Content="Swing Rate" Margin="5" BorderThickness="0" Background="Transparent" />
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="1">
+                    <Button Command="{Binding }" Click="Button_Click" Tag="{x:Static engine:PlayerStats+UpgradablePlayerStat.SwingDamage}" Content="Swing Damage" Margin="5" Background="Transparent" BorderThickness="0" />
+                </Grid>
+                <Grid Grid.Row="4" Grid.Column="1">
+                    <Button Command="{Binding }" Click="Button_Click" Tag="{x:Static engine:PlayerStats+UpgradablePlayerStat.SwingRange}" Content="Swing Range" Margin="5" BorderThickness="0" Background="Transparent" />
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
