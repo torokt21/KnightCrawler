@@ -13,7 +13,7 @@ namespace KnightCrawler.Engine.Models.Behaviours
     internal abstract class ChasingBehaviourBase : EntityMovementBehaviour
     {
         /// <summary>
-        /// The difference in the coordinets from which the entity considers itself to be on the correct coordinate.
+        /// The difference in the coordinates from which the entity considers itself to be on the correct coordinate.
         /// </summary>
         private const float SameLineThreshold = 0.1f;
 
@@ -21,7 +21,7 @@ namespace KnightCrawler.Engine.Models.Behaviours
         /// Initializes a new instance of the <see cref="ChasingBehaviourBase"/> class.
         /// </summary>
         /// <param name="speed">The speed ot the enemy.</param>
-        /// <param name="entity">THe entity.</param>
+        /// <param name="entity">The entity.</param>
         public ChasingBehaviourBase(double speed, Entity entity)
             : base(speed, entity)
         {

@@ -16,7 +16,7 @@ namespace KnightCrawler.Engine.Sounds
     /// </summary>
     public static class SoundPlayer
     {
-        private const bool MuteMusic = false;
+        private const bool MuteMusic = true;
 
         /// <summary>
         /// The types of sounds in the game.

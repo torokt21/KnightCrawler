@@ -50,7 +50,7 @@ namespace KnightCrawler.Engine.Models.Behaviours
         public List<FloorTile> Path { get; private set; }
 
         /// <summary>
-        /// Gets the behaviour in case the entity is stadning at the same tile as the target, but does not touch it.
+        /// Gets the behaviour that is only used in case the entity is standing at the same tile as its target, but does not touch it.
         /// </summary>
         private MindlessChasing ChasingBehaviour { get; }
 
@@ -92,7 +92,7 @@ namespace KnightCrawler.Engine.Models.Behaviours
         /// Calculates the weighted cost of getting from on node to another if there were no obstacles in the way.
         /// </summary>
         /// <param name="node1">The starting node.</param>
-        /// <param name="node2">THe target node.</param>
+        /// <param name="node2">The target node.</param>
         /// <returns>Returns the calculated cost.</returns>
         private static int GetDistance(AStarNode node1, AStarNode node2)
         {
@@ -239,12 +239,12 @@ namespace KnightCrawler.Engine.Models.Behaviours
         }
 
         /// <summary>
-        /// Gets the list of nodes neughboring the given node.
+        /// Gets the list of nodes neighbouring the given node.
         /// </summary>
         /// <param name="node">The node.</param>
-        /// <param name="nodeMatrix">The node to search in.</param>
+        /// <param name="nodeMatrix">The nodes to search in.</param>
         /// <returns>List of nodes.</returns>
-        private List<AStarNode> GetNeighbours(AStarNode node, AStarNode[,] nodeMatrix)
+        private IEnumerable<AStarNode> GetNeighbours(AStarNode node, AStarNode[,] nodeMatrix)
         {
             List<AStarNode> tiles = new List<AStarNode>();
             for (int x = -1; x <= 1; x++)
@@ -270,13 +270,11 @@ namespace KnightCrawler.Engine.Models.Behaviours
                             (nodeMatrix[checkX, (int)node.Tile.Rectangle.Y].Tile.BlocksPathFinding ||
                             nodeMatrix[(int)node.Tile.Rectangle.X, checkY].Tile.BlocksPathFinding)))
                         {
-                            tiles.Add(nodeMatrix[checkX, checkY]);
+                            yield return nodeMatrix[checkX, checkY];
                         }
                     }
                 }
             }
-
-            return tiles;
         }
 
         /// <summary>

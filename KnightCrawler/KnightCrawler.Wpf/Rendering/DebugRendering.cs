@@ -17,7 +17,7 @@ namespace KnightCrawler.Wpf.Rendering
     /// </summary>
     internal partial class RenderingControl
     {
-        private const bool DebugMode = false;
+        private const bool DebugMode = true;
 
         private Drawing DrawEnemyPaths()
         {
